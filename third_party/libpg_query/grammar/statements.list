@@ -26,6 +26,7 @@ ImportStmt
 IndexStmt
 InsertStmt
 LoadStmt
+MaterializeStmt
 PragmaStmt
 PrepareStmt
 RenameStmt

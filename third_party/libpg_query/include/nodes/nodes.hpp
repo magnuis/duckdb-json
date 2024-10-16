@@ -125,6 +125,7 @@ typedef enum PGNodeTag {
 	T_PGNestLoopState,
 	T_PGMergeJoinState,
 	T_PGHashJoinState,
+	T_PGMaterializeStmt,
 	T_PGMaterialState,
 	T_PGSortState,
 	T_PGGroupState,
