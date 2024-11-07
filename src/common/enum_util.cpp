@@ -5112,6 +5112,8 @@ const char* EnumUtil::ToChars<ParseInfoType>(ParseInfoType value) {
 		return "COPY_DATABASE_INFO";
 	case ParseInfoType::UPDATE_EXTENSIONS_INFO:
 		return "UPDATE_EXTENSIONS_INFO";
+	case ParseInfoType::MATERIALIZE_INFO:
+		return "MATERIALIZE_INFO";
 	default:
 		throw NotImplementedException(StringUtil::Format("Enum value: '%d' not implemented", value));
 	}
@@ -5169,6 +5171,9 @@ ParseInfoType EnumUtil::FromString<ParseInfoType>(const char *value) {
 	}
 	if (StringUtil::Equals(value, "UPDATE_EXTENSIONS_INFO")) {
 		return ParseInfoType::UPDATE_EXTENSIONS_INFO;
+	}
+	if (StringUtil::Equals(value, "MATERIALIZE_INFO")) {
+		return ParseInfoType::MATERIALIZE_INFO;
 	}
 	throw NotImplementedException(StringUtil::Format("Enum value: '%s' not implemented", value));
 }
@@ -6909,6 +6914,8 @@ const char* EnumUtil::ToChars<StatementType>(StatementType value) {
 		return "COPY_DATABASE_STATEMENT";
 	case StatementType::UPDATE_EXTENSIONS_STATEMENT:
 		return "UPDATE_EXTENSIONS_STATEMENT";
+	case StatementType::MATERIALIZE_STATEMENT:
+		return "MATERIALIZE_STATEMENT";
 	default:
 		throw NotImplementedException(StringUtil::Format("Enum value: '%d' not implemented", value));
 	}
@@ -7005,6 +7012,9 @@ StatementType EnumUtil::FromString<StatementType>(const char *value) {
 	}
 	if (StringUtil::Equals(value, "UPDATE_EXTENSIONS_STATEMENT")) {
 		return StatementType::UPDATE_EXTENSIONS_STATEMENT;
+	}
+	if (StringUtil::Equals(value, "MATERIALIZE_STATEMENT")) {
+		return StatementType::MATERIALIZE_STATEMENT;
 	}
 	throw NotImplementedException(StringUtil::Format("Enum value: '%s' not implemented", value));
 }

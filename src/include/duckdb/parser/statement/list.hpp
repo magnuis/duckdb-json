@@ -23,3 +23,4 @@
 #include "duckdb/parser/statement/update_statement.hpp"
 #include "duckdb/parser/statement/update_extensions_statement.hpp"
 #include "duckdb/parser/statement/vacuum_statement.hpp"
+#include "duckdb/parser/statement/materialize_statement.hpp"

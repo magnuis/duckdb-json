@@ -2244,8 +2244,8 @@ typedef struct PGCommentOnStmt {
  */
 typedef struct PGMaterializeStmt {
 	PGNodeTag type;
-	char *column; /* the column definition for the materialized field */
-	PGNode *fieldname; /* name of field*/
+	char *column; /* the name of the json column */
+	PGNode *fieldname; /* the column definition for the materialized field */
 	// PGObjectType data_type; 	/* data type of the materialized column */
 	PGList *fromClause; /* the table to materialize column from */
 } PGMaterializeStmt;

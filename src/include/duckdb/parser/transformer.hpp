@@ -190,6 +190,9 @@ private:
 	static bool TransformPivotInList(unique_ptr<ParsedExpression> &expr, PivotColumnEntry &entry,
 	                                 bool root_entry = true);
 
+
+	unique_ptr<SQLStatement> TransformMaterialize(duckdb_libpgquery::PGMaterializeStmt &stmt);
+
 	//===--------------------------------------------------------------------===//
 	// SetStatement Transform
 	//===--------------------------------------------------------------------===//
